@@ -4,7 +4,13 @@ import cors from 'cors';
 const app = express();
 app.use(cors());
 app.use(express.json());
+const cors = require("cors");
 
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type"]
+}));
 /* 2captcha Key */
 const KEY = process.env.CAPTCHA_KEY || '69d7ba6633b6005d2dbb64dfb4257b44';
 const ARKOSE_KEYS = ['476068BF-9607-4799-B53D-966BE98E2B81', '9F35E182-C93C-EBCC-A31D-CF8ED317B996'];
