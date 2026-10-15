@@ -264,4 +264,3 @@ app.post('/verify2fa', async (req, res) => {
    7. Start
    ============================================================ */
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, '0.0.0.0', () => console.log('Server läuft auf Port ' + PORT));
